@@ -3,7 +3,8 @@ import style from "styled-components";
 export const NavCon = style.nav`
   display: flex;
   align-items: center;
-  padding: 12px;
+  line-height: 1;
+  margin-bottom: 12px;
 `;
 
 export const NavTitle = style.div`
