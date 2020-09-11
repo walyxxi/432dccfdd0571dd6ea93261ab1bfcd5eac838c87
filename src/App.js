@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import style from "styled-components";
+import DateScroll from "./components/DateScroll";
 
-function App() {
+const Container = style.div`
+  display: flex;
+  flex-direction: column;
+  width: 375px;
+  margin: auto;
+`;
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Navbar />
+      <DateScroll />
+    </Container>
   );
-}
+};
 
 export default App;
