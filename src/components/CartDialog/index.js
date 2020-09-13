@@ -10,12 +10,14 @@ import {
 import MaterialIcons from "material-icons-react";
 import { color } from "../Pallate";
 
-const CartDialog = () => {
+const CartDialog = (props) => {
+  const { cartValue } = props;
+
   return (
     <Container>
       <Content>
         <BoxColumn>
-          <TextLarge>5 Items | Rp. 250,000</TextLarge>
+          <TextLarge>{cartValue} Items | Rp. 250,000</TextLarge>
           <TextMedium>Termasuk ongkos kirim</TextMedium>
         </BoxColumn>
         <BoxRow>

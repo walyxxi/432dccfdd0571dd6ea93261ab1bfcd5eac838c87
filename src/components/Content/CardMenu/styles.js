@@ -11,7 +11,7 @@ export const CardMedia = styled.div`
 `;
 
 export const CardImage = styled.img`
-  width: 100%;
+  width: inherit;
 `;
 
 export const CardCaption = styled.div`
@@ -62,8 +62,12 @@ export const ButtonAdd = styled.button`
   border-radius: 4px;
   text-align: center;
   border: 0;
+  cursor: pointer;
   &:focus {
     outline: none;
     border: none;
+  }
+  &:hover {
+    background-color: ${color.brown};
   }
 `;

@@ -4,7 +4,13 @@ import { Nav, Box, NavTitle, Caption, Title } from "./styles";
 import { color } from "../Pallate";
 import DateScroll from "../DateScroll";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { setLocSearchToggle } = props;
+
+  const handleOpenSearch = () => {
+    setLocSearchToggle(true);
+  };
+
   return (
     <Nav>
       <Box>
@@ -14,7 +20,7 @@ const Navbar = () => {
           width="30px"
           height="30px"
         />
-        <NavTitle>
+        <NavTitle onClick={handleOpenSearch}>
           <Caption>ALAMAT PENGANTARAN</Caption>
           <Title>
             Tower BCA Sudirman
