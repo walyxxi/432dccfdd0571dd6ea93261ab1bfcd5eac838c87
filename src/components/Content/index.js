@@ -10,6 +10,8 @@ const Content = () => {
       <EatingTime />
       <DateText>{moment().format("dddd, DD MMMM YYYY")}</DateText>
       <CardMenu />
+      <CardMenu />
+      <CardMenu />
     </Container>
   );
 };

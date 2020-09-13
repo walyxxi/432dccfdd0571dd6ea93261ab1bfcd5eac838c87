@@ -1,12 +1,12 @@
 import React from "react";
 import MaterialIcon from "material-icons-react";
-import style from "styled-components";
+import styled from "styled-components";
 import { color } from "./Pallate";
 
 const clr = color;
 
 const IconButton = ({ color, icon, width, height }) => {
-  const Button = style.a`
+  const Button = styled.a`
     display: flex;
     cursor: pointer;
     align-items: center;

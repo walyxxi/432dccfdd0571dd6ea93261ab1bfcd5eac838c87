@@ -1,24 +1,24 @@
-import style from "styled-components";
+import styled from "styled-components";
 import { color } from "../Pallate";
 
-export const Nav = style.div`
+export const Nav = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  width: 375px;
+  width: inherit;
   position: fixed;
   line-height: 1;
-  padding-top: 12px;
+  padding: 12px 4px 0 4px;
   background-color: white;
   border-bottom: solid 1px ${color.lightGray};
 `;
 
-export const Box = style.div`
+export const Box = styled.div`
   display: flex;
   flex-direction: row;
 `;
 
-export const NavTitle = style.div`
+export const NavTitle = styled.div`
   align-item: center;
   justify-content: center;
   display: flex;
@@ -26,13 +26,13 @@ export const NavTitle = style.div`
   margin-left: 8px;
 `;
 
-export const Caption = style.div`
+export const Caption = styled.div`
   color: ${color.gray};
   flex: 1;
   font-size: 8px;
 `;
 
-export const Title = style.div`
+export const Title = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;

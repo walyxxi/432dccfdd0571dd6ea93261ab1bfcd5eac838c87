@@ -1,17 +1,17 @@
-import style from "styled-components";
+import styled from "styled-components";
 import { color } from "../Pallate";
 
-export const Container = style.div`
+export const Container = styled.div`
   display: flex;
   overflow-x: scroll;
-  margin: 0 12px;
+  margin: 0 14px;
   &::-webkit-scrollbar {
     height: 0;
     background: transparent;
   }
 `;
 
-export const DateButtonActive = style.button`
+export const DateButtonActive = styled.button`
   width: 40px;
   height: 40px;
   margin: 4px;
@@ -35,7 +35,7 @@ export const DateButtonActive = style.button`
   }
 `;
 
-export const DateButtonDisabled = style.button`
+export const DateButtonDisabled = styled.button`
   width: 40px;
   height: 40px;
   margin: 4px;
@@ -45,20 +45,20 @@ export const DateButtonDisabled = style.button`
   border: 0;
 `;
 
-export const DayText = style.p`
+export const DayText = styled.p`
   margin: 0;
   text-align: center;
   font-size: 8px;
   color: ${color.gray};
 `;
 
-export const DayTextDisabled = style.p`
+export const DayTextDisabled = styled.p`
   margin: 0;
   text-align: center;
   font-size: 8px;
 `;
 
-export const DateText = style.p`
+export const DateText = styled.p`
   margin: 0;
   font-size: 14px;
   font-weight: bold;
@@ -66,7 +66,7 @@ export const DateText = style.p`
   color: ${color.darkGray};
 `;
 
-export const DateTextDisabled = style.p`
+export const DateTextDisabled = styled.p`
   margin: 0;
   font-size: 14px;
   font-weight: bold;

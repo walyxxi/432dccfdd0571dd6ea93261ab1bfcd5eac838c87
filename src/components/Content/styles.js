@@ -1,16 +1,16 @@
-import style from "styled-components";
+import styled from "styled-components";
 import { color } from "../Pallate";
 
-export const Container = style.div`
+export const Container = styled.div`
   margin-top: 90px;
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 12px 12px 12px;
+  padding: 0 16px 0 16px;
   overflow-y: auto;
 `;
 
-export const DateText = style.div`
+export const DateText = styled.div`
   color: ${color.darkGray};
   font-size: 14px;
   font-weight: bold;

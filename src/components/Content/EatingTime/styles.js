@@ -1,7 +1,7 @@
-import style from "styled-components";
+import styled from "styled-components";
 import { color } from "../../Pallate";
 
-export const GroupButton = style.div`
+export const GroupButton = styled.div`
   width: 100%;
   margin-top: 12px;
   margin-bottom: 32px;
@@ -13,7 +13,7 @@ export const GroupButton = style.div`
   overflow: hidden;
 `;
 
-export const ButtonActive = style.a`
+export const ButtonActive = styled.a`
   width: 50%;
   cursor: pointer;
   color: white;
@@ -27,7 +27,7 @@ export const ButtonActive = style.a`
   }
 `;
 
-export const ButtonDisabled = style.a`
+export const ButtonDisabled = styled.a`
   width: 50%;
   color: #6e7679;
   text-align: center;
