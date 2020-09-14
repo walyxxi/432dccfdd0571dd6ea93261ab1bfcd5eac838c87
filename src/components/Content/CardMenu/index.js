@@ -14,7 +14,7 @@ import MaterialIcon from "material-icons-react";
 import { color } from "../../Pallate";
 
 const CardMenu = (props) => {
-  const { cartValue, setCartValue } = props;
+  const { cartValue, setCartValue, eatTime } = props;
 
   const handleAdd = () => {
     setCartValue(cartValue + 1);
@@ -33,7 +33,7 @@ const CardMenu = (props) => {
           <MaterialIcon icon="star_half" color={color.red} size="12px" />
         </FoodStart>
         <TextDark>Pizza Pottato Bianca</TextDark>
-        <TextGray>by Kulina &bull; Uptown Lunch</TextGray>
+        <TextGray>by Kulina &bull; Uptown {eatTime}</TextGray>
         <CardFooter>
           <TextDark>Rp. 45,000</TextDark>
           <ButtonAdd onClick={handleAdd}>

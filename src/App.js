@@ -15,11 +15,23 @@ const Container = styled.div`
 const App = () => {
   const [locSearchToggle, setLocSearchToggle] = useState(false);
   const [cartValue, setCartValue] = useState(null);
+  const [dateSelected, setDateSelected] = useState(Date.now());
+  const [eatTime, setEatTime] = useState("Lunch");
 
   return (
     <Container>
-      <Navbar setLocSearchToggle={setLocSearchToggle} />
-      <Content cartValue={cartValue} setCartValue={setCartValue} />
+      <Navbar
+        setLocSearchToggle={setLocSearchToggle}
+        dateSelected={dateSelected}
+        setDateSelected={setDateSelected}
+      />
+      <Content
+        cartValue={cartValue}
+        setCartValue={setCartValue}
+        dateSelected={dateSelected}
+        eatTime={eatTime}
+        setEatTime={setEatTime}
+      />
       {cartValue && <CartDialog cartValue={cartValue} />}
       {locSearchToggle && <LocSearch setLocSearchToggle={setLocSearchToggle} />}
     </Container>

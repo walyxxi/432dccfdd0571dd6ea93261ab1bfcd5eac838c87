@@ -16,6 +16,7 @@ export const Nav = styled.div`
 export const Box = styled.div`
   display: flex;
   flex-direction: row;
+  margin-bottom: 4px;
 `;
 
 export const NavTitle = styled.div`

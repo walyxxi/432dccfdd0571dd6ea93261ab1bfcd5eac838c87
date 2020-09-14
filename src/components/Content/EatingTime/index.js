@@ -1,11 +1,27 @@
 import React from "react";
-import { GroupButton, ButtonActive, ButtonDisabled } from "./styles";
+import { GroupButton, Button } from "./styles";
 
-const EatingTime = () => {
+const EatingTime = (props) => {
+  const { eatTime, setEatTime } = props;
+
+  const handleClick = (d) => {
+    setEatTime(d);
+  };
+
   return (
     <GroupButton>
-      <ButtonActive>Lunch</ButtonActive>
-      <ButtonDisabled disabled>Dinner</ButtonDisabled>
+      <Button
+        disabled={eatTime === "Lunch" ? false : true}
+        onClick={() => handleClick("Lunch")}
+      >
+        Lunch
+      </Button>
+      <Button
+        disabled={eatTime === "Dinner" ? false : true}
+        onClick={() => handleClick("Dinner")}
+      >
+        Dinner
+      </Button>
     </GroupButton>
   );
 };

@@ -11,7 +11,18 @@ import {
 } from "./styles";
 import { get2WeekForwardDate } from "./helpers";
 
-const DateScroll = () => {
+const DateScroll = (props) => {
+  const { dateSelected, setDateSelected } = props;
+  const dateActive = (d) => {
+    return new Date(dateSelected).getDate() === new Date(d).getDate()
+      ? true
+      : false;
+  };
+
+  const handleClick = (d) => {
+    setDateSelected(d);
+  };
+
   return (
     <Container>
       {get2WeekForwardDate &&
@@ -26,9 +37,16 @@ const DateScroll = () => {
                 <DateTextDisabled>{moment(date).format("DD")}</DateTextDisabled>
               </DateButtonDisabled>
             ) : (
-              <DateButtonActive>
-                <DayText>{moment(date).format("ddd").toUpperCase()}</DayText>
-                <DateText>{moment(date).format("DD")}</DateText>
+              <DateButtonActive
+                active={dateActive(date)}
+                onClick={() => handleClick(date)}
+              >
+                <DayText active={dateActive(date)}>
+                  {moment(date).format("ddd").toUpperCase()}
+                </DayText>
+                <DateText active={dateActive(date)}>
+                  {moment(date).format("DD")}
+                </DateText>
               </DateButtonActive>
             )}
           </div>

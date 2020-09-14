@@ -5,15 +5,27 @@ import EatingTime from "./EatingTime";
 import CardMenu from "./CardMenu";
 
 const Content = (props) => {
-  const { cartValue, setCartValue } = props;
+  const { cartValue, setCartValue, dateSelected, eatTime, setEatTime } = props;
 
   return (
     <Container>
-      <EatingTime />
-      <DateText>{moment().format("dddd, DD MMMM YYYY")}</DateText>
-      <CardMenu cartValue={cartValue} setCartValue={setCartValue} />
-      <CardMenu cartValue={cartValue} setCartValue={setCartValue} />
-      <CardMenu cartValue={cartValue} setCartValue={setCartValue} />
+      <EatingTime eatTime={eatTime} setEatTime={setEatTime} />
+      <DateText>{moment(dateSelected).format("dddd, DD MMMM YYYY")}</DateText>
+      <CardMenu
+        eatTime={eatTime}
+        cartValue={cartValue}
+        setCartValue={setCartValue}
+      />
+      <CardMenu
+        eatTime={eatTime}
+        cartValue={cartValue}
+        setCartValue={setCartValue}
+      />
+      <CardMenu
+        eatTime={eatTime}
+        cartValue={cartValue}
+        setCartValue={setCartValue}
+      />
       {cartValue && <BoxMargin />}
     </Container>
   );

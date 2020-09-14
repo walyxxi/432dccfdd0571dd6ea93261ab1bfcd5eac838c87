@@ -13,23 +13,20 @@ export const GroupButton = styled.div`
   overflow: hidden;
 `;
 
-export const ButtonActive = styled.a`
+export const Button = styled.a`
   width: 50%;
-  cursor: pointer;
-  color: white;
+  cursor: ${({ disabled }) => (disabled ? "pointer" : "disabled")};
+  color: ${({ disabled }) => (disabled ? color.white : color.gray)};
   text-align: center;
   font-size: 12px;
   padding: 8px;
-  background-color: #424749;
-  &:hover {
-    outline: 0;
-    background-color: black;
-  }
+  background-color: ${({ disabled }) =>
+    disabled ? color.darkGray : color.white};
 `;
 
 export const ButtonDisabled = styled.a`
   width: 50%;
-  color: #6e7679;
+  color: ${color.gray};
   text-align: center;
   font-size: 12px;
   padding: 8px;

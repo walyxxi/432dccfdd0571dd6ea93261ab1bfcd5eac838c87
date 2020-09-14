@@ -16,22 +16,12 @@ export const DateButtonActive = styled.button`
   height: 40px;
   margin: 4px;
   cursor: pointer;
-  background-color: ${color.white};
+  background-color: ${({ active }) => (active ? color.darkGray : color.white)};
   border-radius: 50%;
   border: 0;
   &:focus {
     outline: none;
     border: none;
-  }
-  &:hover {
-    outline: 0;
-    background-color: ${color.outlineGray};
-  }
-  &:active {
-    color: black;
-    background-color: ${color.lightGray};
-    outline: 0;
-    transition: none;
   }
 `;
 
@@ -49,7 +39,7 @@ export const DayText = styled.p`
   margin: 0;
   text-align: center;
   font-size: 8px;
-  color: ${color.gray};
+  color: ${({ active }) => (active ? color.outlineGray : color.gray)};
 `;
 
 export const DayTextDisabled = styled.p`
@@ -63,7 +53,7 @@ export const DateText = styled.p`
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  color: ${color.darkGray};
+  color: ${({ active }) => (active ? color.white : color.darkGray)};
 `;
 
 export const DateTextDisabled = styled.p`

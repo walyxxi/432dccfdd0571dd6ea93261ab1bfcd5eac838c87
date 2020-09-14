@@ -5,7 +5,7 @@ import { color } from "../Pallate";
 import DateScroll from "../DateScroll";
 
 const Navbar = (props) => {
-  const { setLocSearchToggle } = props;
+  const { setLocSearchToggle, dateSelected, setDateSelected } = props;
 
   const handleOpenSearch = () => {
     setLocSearchToggle(true);
@@ -34,7 +34,10 @@ const Navbar = (props) => {
         </NavTitle>
       </Box>
       <Box>
-        <DateScroll />
+        <DateScroll
+          dateSelected={dateSelected}
+          setDateSelected={setDateSelected}
+        />
       </Box>
     </Nav>
   );
